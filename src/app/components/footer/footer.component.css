@@ -1,0 +1,28 @@
+footer {
+    position: inherit;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #363636;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+img {
+    width: 25px !important;
+}
+
+a {
+    margin-top: 1.5vh;
+    margin-left: 1vw;
+}
+
+

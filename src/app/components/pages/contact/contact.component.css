@@ -1,0 +1,98 @@
+#contact {
+    height: 100vh;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #363636;
+}
+
+h1 {
+    padding-top: 13%;
+    font-size: 34px;
+}
+
+p {
+
+    font-family: 'Dekko';
+    font-size: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    justify-content: center;
+}
+
+.form {
+    display: grid;
+    width: 50vw;
+}
+
+.field {
+    height: 2vh;
+    padding: 2%;
+    margin-top: 4vh;
+    border-radius: 36px 10px;
+    border: 1px;
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    margin-top: 4vh;
+    margin-left: 37vw;
+    font-weight: bold;
+    color: #363636;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    display: grid;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    height: 45vh;
+    width: 30vw;
+  }
+
+  .modal-content h2 {
+    color: #00d900;
+    font-size: 51px;
+    margin-top: 16vh;
+  }
+  
+  .modal-content button {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-weight: bold;
+  }
+
+  @media (max-width: 1715px) {
+    p {
+        width: 81%;
+    }
+  }

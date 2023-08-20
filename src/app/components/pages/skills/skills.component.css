@@ -1,0 +1,110 @@
+#skills {
+    height: 100vh;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    
+  }
+
+  h1 {
+    padding: 6%;
+    font-size: 34px;
+    color: #c29494; 
+    width: 14%;
+    margin-left: 3vw;
+  }
+  
+  .skills-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+  }
+  
+  .card {
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 35px;
+    background: transparent;
+    border-radius: 50%;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  
+  }
+  
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.card-content {
+    padding: 20px;
+}
+  
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ddb3b3;
+    margin-top: 7.5vh;
+}
+  
+.card-description {
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 1300px) {
+  .card-title {
+    font-size: 18px;
+    margin-top: 6vh;
+  }
+
+  .skills-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .card-title {
+    font-size: 14px;
+    margin-top: 4vh;
+  }
+
+  .skills-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+@media (max-width: 880px) {
+  .card-title {
+    font-size: 14px;
+    margin-top: 4vh;
+  }
+
+  .skills-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+}
