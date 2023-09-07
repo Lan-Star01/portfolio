@@ -329,4 +329,31 @@ h1 {
 }
 
 
+@media (max-height: 1000px) {
+
+  #experience {
+    height: 180vh;
+  }
+
+  .card--display img {
+    width: 14%;
+  }
+
+  .card--display h2{
+    font-size: 12px;
+  }
+  .card--hover p{
+    font-size: 9.5px;
+  }
+
+  .card {
+    position: relative;
+    font-weight: bold;
+    width: 70vw;
+    height: 28vh;
+    margin: auto;
+    margin-top: 40%;
+  } 
+
+}
 
