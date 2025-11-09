@@ -34,12 +34,6 @@
   margin-bottom: 30px;
 }
 
-.project-link:hover {
-  background-color: #fff;
-  color: #000;
-  transform: rotate(45deg);
-}
-
 @media (max-width: 768px) {
   #experience {
     padding: 60px 0;
