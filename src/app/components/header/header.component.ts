@@ -1,32 +1,23 @@
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
-  isHeaderSticky = false;
+export class HeaderComponent implements OnInit {
   currentSection: string = '';
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor(private navigationService: NavigationService) {}
 
+  ngOnInit(): void {
+    this.navigationService.currentSection$.subscribe(section => {
+      this.currentSection = section;
+    });
   }
 
   scrollToSection(sectionId: string): void {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-          setTimeout(() => {
-            targetElement.scrollIntoView({behavior:'smooth'});
-          }, 400)
-          this.currentSection = sectionId;
-        }
-      else {
-      console.error('Element not found:', sectionId);
-    }
+    this.navigationService.scrollToSection(sectionId);
   }
-
-
-
-
 }

@@ -1,37 +1,38 @@
 import { Component } from '@angular/core';
 
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+}
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent {
-  cards: Card[] = [
+  projects: Project[] = [
     {
-      classname: '',
-      iconname: 'assets/img/management.png',
-      title: 'Workday Management Project',
-      description: "The website helps companies to effectively manage their working day. I started this project at work and am currently working on it. For the project I use angular.js, rxjs, primeng, bootsrtap, for the full functionality of the site I cooperate with the back to use the restful API and I always test new futures and follow the debugging. I also designed and built the site according to the client's request."
+      id: '01',
+      title: 'RedSeam - E-Commerce Clothing Store',
+      description: "A full-featured e-commerce web application for clothing shopping built with Angular and Firebase. Integrates with a real REST API for dynamic product data. Features include user authentication, product catalog with pagination, detailed product pages with color and size selection, shopping cart sidebar, and a comprehensive checkout form. Users can browse products, add items to cart, and complete purchases seamlessly.",
+      image: 'assets/img/redseam.png',
+      link: 'https://redseam-clothing-app.netlify.app/'
     },
     {
-      classname: '',
-      iconname: 'assets/img/medicl.png',
-      title: 'Medicine Project',
-      description: 'The website is intended for hospital staff to store patient information electronically instead of writing and printing on paper. I started working on this project during my internship and now I am continuing this project. Since this project was already started I had to analyze the whole code. I use angular.js, primeng, bootstrap, restfull API for it. Since the design was already assembled, I have to do mostly the logical part and make some minor changes to the design.'
+      id: '02',
+      title: 'Coming Soon',
+      description: 'This project is currently in development. Stay tuned for updates on this exciting new web application that will showcase modern development practices and innovative features.',
+      image: 'assets/img/coming-soon.jpg'
     },
     {
-      classname: '',
-      iconname: 'assets/img/market.png',
-      title: 'Market Project',
-      description: 'The website helps store associates to see product quantities, and can add, filter, or send back to the warehouse, etc. I started working on this project during my internship, because the project was already active, I analyzed the code and started working on it, added new futures and also redesigned the old ones. The project started with jquery and I continued to write the codes using it, but later on I used typescript. I also used bootstrap, Restfull API.'
-    },
-    // Add more card objects as needed
+      id: '03',
+      title: 'Coming Soon',
+      description: 'Another exciting project is on the way! This space will be updated soon with details about a new web application demonstrating advanced frontend development techniques.',
+      image: 'assets/img/coming-soon.jpg'
+    }
   ];
-}
-
-interface Card {
-  classname: string;
-  iconname: string;
-  title: string;
-  description: string;
 }

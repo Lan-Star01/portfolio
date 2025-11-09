@@ -1,4 +1,4 @@
-.navbar {
+.custom-navbar {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -8,7 +8,7 @@
     height: 60px;
 }
 
-.container {
+.nav-container {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -39,7 +39,7 @@ span img {
     font-size: 1.3em;
 }
 
-.navbar.sticky {
+.custom-navbar.sticky {
     position: fixed;
 }
 
@@ -48,14 +48,14 @@ span img {
 }
 
 @media (max-width: 1220px) {
-    .container {
+    .nav-container {
         display: grid;
         grid-template-columns: auto;
     }
-    span { 
+    span {
         display: none;
     }
-  
+
 }
   
 

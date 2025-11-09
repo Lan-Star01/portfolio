@@ -1,22 +1,25 @@
 <section id="experience">
-    <h1 class="title">Projects</h1>
-    <div class="experience-grid">
-        <div class="card-container">
-            <div class="card" *ngFor="let card of cards" [ngClass]="card.classname">
-              <a >
-                <div class="card--display">
-                  <img src="{{card.iconname}}" alt="Icon Image">
-                  <h2>{{card.title}}</h2>
+    <div class="container-fluid px-4 px-md-5">
+        <h1 class="section-title text-center mb-5 text-white">Projects</h1>
+
+        <div class="projects-container">
+            <div *ngFor="let project of projects; let i = index" class="row align-items-center mb-5 pb-5 project-row justify-content-around" [class.flex-row-reverse]="i % 2 !== 0">
+
+                <div class="col-12 col-md-5 project-image-wrapper">
+                    <div class="project-image">
+                        <img [src]="project.image" [alt]="project.title" class="img-fluid" loading="lazy">
+                    </div>
                 </div>
-                <div class="card--hover">
-                  <h2>{{card.title}}</h2>
-                  <p>{{card.description}}</p>
+
+                <div class="col-12 col-md-5 project-content">
+                    <h2 class="project-number">{{project.id}}</h2>
+                    <h3 class="project-title">{{project.title}}</h3>
+                    <p class="project-description">{{project.description}}</p>
+                    <a *ngIf="project.link" [href]="project.link" class="project-link d-inline-flex align-items-center justify-content-center" target="_blank">
+                        <img src="assets/img/redirect.svg" alt="open link">
+                    </a>
                 </div>
-              </a>
-              <div class="card--border"></div>
             </div>
         </div>
     </div>
 </section>
-
-

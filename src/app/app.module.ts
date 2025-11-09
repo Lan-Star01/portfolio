@@ -2,11 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-// // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireStorageModule } from "@angular/fire/compat/storage"
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +14,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { SkillsComponent } from './components/pages/skills/skills.component';
 import { ExperienceComponent } from './components/pages/experience/experience.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { environment } from 'src/environments/environment';
-// import { MatIconModule } from '@angular/material/icon';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,9 +33,7 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule,
-    // MatIconModule
-    // AngularFirestore,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

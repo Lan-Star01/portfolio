@@ -1,40 +1,35 @@
 <section id="contact">
-    <div class="contact-grid">
-        <h1 class="title">Get In Touch</h1>
-        <p>Do you fancy saying hi to me or you want to get started with 
-            your project and you need my help? Feel free to contact me</p>
-        <form class="form"  [formGroup]="contactForm" novalidate>
+    <div class="container-fluid">
+        <div class="contact-grid">
+            <h1 class="section-title text-start mb-5 text-black">Get In Touch</h1>
+            <p>Do you fancy saying hi to me or you want to get started with
+                your project and you need my help? Feel free to contact me</p>
+            <form class="form"  [formGroup]="contactForm" novalidate>
 
-            <input class="field form-control" type="text" formControlName="firstname" id="firstname" placeholder="First name">
-            <div *ngIf="contactForm.get('firstname')?.errors && contactForm.get('firstname')?.touched">
-              <span class="error">First name is required</span>
-            </div>
+                <input class="field form-control" type="text" formControlName="firstname" id="firstname" placeholder="First name">
+                <div *ngIf="contactForm.get('firstname')?.errors && contactForm.get('firstname')?.touched">
+                  <span class="error">First name is required</span>
+                </div>
 
-            <input class="field form-control" type="text" formControlName="lastname" id="lastname" placeholder="Last name">
-            <div *ngIf="contactForm.get('lastname')?.errors && contactForm.get('lastname')?.touched">
-              <span class="error">Last name is required</span>
-            </div>
+                <input class="field form-control" type="text" formControlName="lastname" id="lastname" placeholder="Last name">
+                <div *ngIf="contactForm.get('lastname')?.errors && contactForm.get('lastname')?.touched">
+                  <span class="error">Last name is required</span>
+                </div>
 
-            <input class="field form-control" type="email" formControlName="email" id="email" placeholder="E-mail">
+                <input class="field form-control" type="email" formControlName="email" id="email" placeholder="E-mail">
 
-            <div *ngIf="contactForm.get('email')?.errors && contactForm.get('email')?.touched">
-              <span class="error">Invalid email address</span>
-            </div>
-            <textarea class="field form-control" formControlName="message" id="message" cols="30" rows="10" placeholder="Write your message"></textarea>
-            <div *ngIf="contactForm.get('message')?.errors && contactForm.get('message')?.touched">
-              <span class="error">Message is required</span>
-            </div>
+                <div *ngIf="contactForm.get('email')?.errors && contactForm.get('email')?.touched">
+                  <span class="error">Invalid email address</span>
+                </div>
+                <textarea class="field form-control" formControlName="message" id="message" cols="30" rows="10" placeholder="Write your message"></textarea>
+                <div *ngIf="contactForm.get('message')?.errors && contactForm.get('message')?.touched">
+                  <span class="error">Message is required</span>
+                </div>
 
-            <input class="button form-control" (click)="onSubmit(contactForm.value)" type="submit" value="SEND MESSAGE →" > 
+                <input class="button form-control" (click)="onSubmit(contactForm.value)" type="submit" value="SEND MESSAGE →" >
 
-        </form>
+            </form>
 
-        <div class="modal-overlay" *ngIf="showModal">
-          <div class="modal-content">
-            <h2>Success!</h2>
-            <button (click)="closeModal()">Close</button>
-          </div>
         </div>
-       
     </div>
 </section>

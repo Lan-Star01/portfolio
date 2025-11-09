@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationService } from '../../../services/navigation.service';
 
 @Component({
   selector: 'app-about',
@@ -7,16 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  constructor(private navigationService: NavigationService) {}
+
   scrollToSection(sectionId: string): void {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-          setTimeout(() => {
-            targetElement.scrollIntoView({behavior:'smooth'});
-          }, 400)
-        }
-      else {
-      console.error('Element not found:', sectionId);
-    }
+    this.navigationService.scrollToSection(sectionId);
   }
-  
 }

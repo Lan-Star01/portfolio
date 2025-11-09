@@ -1,34 +1,14 @@
 #contact {
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     color: #363636;
-}
-
-h1 {
-    padding-top: 13%;
-    font-size: 34px;
-}
-
-p {
-
-    font-family: 'Dekko';
-    font-size: 20px;
-}
-
-.contact-grid {
-    display: grid;
-    justify-content: center;
-}
-
-.form {
-    display: grid;
-    width: 50vw;
+    display: flex;
+    align-items: center;
 }
 
 .field {
-    height: 2vh;
     padding: 2%;
-    margin-top: 4vh;
+    margin-top: 1rem;
     border-radius: 36px 10px;
     border: 1px;
 }
@@ -41,11 +21,11 @@ textarea {
     font-size: 25px;
     background: transparent;
     border: none;
-    margin-top: 4vh;
-    margin-left: 37vw;
+    margin-top: 1rem;
     font-weight: bold;
     color: #363636;
     cursor: pointer;
+    text-align: end;
 }
 
 .error {
@@ -94,5 +74,33 @@ textarea {
   @media (max-width: 1715px) {
     p {
         width: 81%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #contact {
+        min-height: auto;
+    }
+
+    .button {
+        font-size: 18px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact-grid {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80vw;
+        height: auto;
+        padding: 30px;
+    }
+
+    .modal-content h2 {
+        font-size: 32px;
+        margin-top: 20px;
     }
   }
