@@ -3,20 +3,10 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: #000;
     text-align: center;
-    padding: 10px 0;
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    color: #363636;
+    padding: 10px 20px;
+    color: #fff;
+    border-bottom: 1px solid #363636;
+    align-items: center;
 }
-
-.footer{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-}
-
-img {
-    width: 25px !important;
-}
-
