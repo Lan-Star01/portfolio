@@ -73,8 +73,8 @@ a:not(:hover) {
      0    3px 0 #000;
 }
 
-#about img {
-  max-width: 100%;
+#about .developer-img {
+  max-width: 80%;
   height: auto;
 }
 
@@ -124,7 +124,7 @@ a:not(:hover) {
        0    1px 0 #000;
   }
 
-  #about img {
+  #about .developer-img {
     max-width: 80%;
     margin: 20px auto;
   }
@@ -151,7 +151,7 @@ a:not(:hover) {
 .social-button {
   width: 56px;
   height: 56px;
-  padding: 16px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,8 +164,8 @@ a:not(:hover) {
 }
 
 .social-button img {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
 

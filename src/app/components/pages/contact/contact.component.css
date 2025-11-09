@@ -103,4 +103,8 @@ textarea {
         font-size: 32px;
         margin-top: 20px;
     }
+
+    .field {
+        padding: 3%;
+    }
   }

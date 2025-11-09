@@ -32,9 +32,14 @@ section {
     section {
         padding: 40px 20px;
     }
+
+    .section-title {
+        font-size: 32px !important;
+    }
 }
 
 .section-title {
   font-size: 48px;
   font-weight: 700;
 }
+ 
