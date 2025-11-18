@@ -2,14 +2,12 @@
     <div class="nav-container">
         <span class="logo"><img src="assets/img/icon.png" alt="Logo"></span>
 
-        <!-- Burger Menu Icon -->
         <button class="burger-menu" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- Navigation Menu -->
         <ul class="menu" [class.active]="isMenuOpen">
             <li><a [class.active]="currentSection === 'about'" (click)="scrollToSection('about')">About</a></li>
             <li><a [class.active]="currentSection === 'skills'" (click)="scrollToSection('skills')">Skills</a></li>
@@ -17,6 +15,9 @@
             <li><a [class.active]="currentSection === 'contact'" (click)="scrollToSection('contact')">Contact me</a></li>
         </ul>
     </div>
+    <button class="scroll-to-top" (click)="scrollToTop()" [class.show]="isScrolled">
+    ↑
+    </button>
     <router-outlet></router-outlet>
 </nav>
 

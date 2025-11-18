@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { NavigationService } from '../../services/navigation.service';
 export class HeaderComponent implements OnInit {
   currentSection: string = '';
   isMenuOpen: boolean = false;
+  isScrolled: boolean = false;
 
   constructor(private navigationService: NavigationService) {}
 
@@ -16,6 +17,11 @@ export class HeaderComponent implements OnInit {
     this.navigationService.currentSection$.subscribe(section => {
       this.currentSection = section;
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.pageYOffset > 100;
   }
 
   toggleMenu(): void {
@@ -41,5 +47,9 @@ export class HeaderComponent implements OnInit {
     document.body.style.overflow = '';
     document.body.style.position = '';
     document.body.style.width = '';
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

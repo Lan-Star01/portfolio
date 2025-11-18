@@ -25,14 +25,8 @@ export class ExperienceComponent {
     {
       id: '02',
       title: 'Coming Soon',
-      description: 'This project is currently in development. Stay tuned for updates on this exciting new web application that will showcase modern development practices and innovative features.',
+      description: 'Property listing and management platform currently in development. Features advanced filtering by region, price, area, and bedrooms, agent profiles, seamless CRUD operations, and persistent data handling across sessions.',
       image: 'assets/img/coming-soon.jpg'
     },
-    {
-      id: '03',
-      title: 'Coming Soon',
-      description: 'Another exciting project is on the way! This space will be updated soon with details about a new web application demonstrating advanced frontend development techniques.',
-      image: 'assets/img/coming-soon.jpg'
-    }
   ];
 }
